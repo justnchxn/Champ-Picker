@@ -18,33 +18,28 @@ jobs:
   build:
     runs-on: ubuntu-latest
 
-    # All shell steps below run from your subfolder
+    # 👇 All shell steps run inside your app folder
     defaults:
       run:
-        working-directory: champ-pick-app
+        working-directory: champ-picker-app
 
     steps:
       - name: Checkout
         uses: actions/checkout@v4
 
-      # 🔎 Debug: prove the lockfile exists where we think it does
-      - name: Show files & lockfile
+      # (Optional) quick debug so we catch path typos fast
+      - name: Debug: show where we are
         run: |
           pwd
           ls -la
-          test -f package-lock.json && echo "Found package-lock.json" || (echo "LOCKFILE NOT FOUND" && exit 1)
 
       - name: Setup Node & cache
         uses: actions/setup-node@v4
         with:
           node-version: 20
           cache: npm
-          # ✅ Make path repo-root relative; use a safe glob in case casing differs
-          cache-dependency-path: |
-            champ-pick-app/package-lock.json
-            **/package-lock.json
+          cache-dependency-path: champ-picker-app/package-lock.json  # lockfile path in repo
 
-      # npm ci requires the lockfile in the current working directory (we set it above)
       - name: Install deps
         run: npm ci
 
@@ -54,7 +49,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: champ-pick-app/dist
+          path: champ-picker-app/dist   # built files
 
   deploy:
     needs: build
