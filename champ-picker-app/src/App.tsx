@@ -4,6 +4,13 @@ import React, { useEffect, useMemo, useState } from "react";
 // Improve Logic/Maths, Tinker with champion identities / specific roles. 
 // Research using riot database on improving counters logic
 // Fix darkmode
+// - 2 things are needed for successful jungle ganks, Damage and CC (crowd control)
+// - Have good synergy between jungler and support, especially in higher ranks
+// - Laners should have opposite of what jungler has ideally (ex. lee sin has damage, laner should have cc)
+// - Consider duo lane synergies (ex. don't play poke support with all-in ADC)
+// - Consider 'neutral' champions (ex. JInx, Aphelios, Jarvan, Syndra) that have BOTH damage and gank setup, especially in early draft
+// - It's okay to sacrifice some synergy when a champ is TOO good to pick (ex. Vayne into 4 melee tanks)
+// - Counter your team's counters (ex. Kogmaw Lulu are countered by dive, but Gwen loves being dived on)
 // ==========================
 
 type Champ = { id: string; key: string; name: string; title: string; tags: string[]; image: { full: string } };
