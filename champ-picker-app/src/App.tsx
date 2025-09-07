@@ -1,7 +1,8 @@
 import React, { useEffect, useMemo, useState } from "react";
 
 // ==========================
-// Improve Logic/Maths, Tinker with champion identities / specific roles.
+// Improve Logic/Maths, Tinker with champion identities / specific roles. 
+// Research using riot database on improving counters
 // ==========================
 
 type Champ = { id: string; key: string; name: string; title: string; tags: string[]; image: { full: string } };
