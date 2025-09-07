@@ -2,7 +2,7 @@ import React, { useEffect, useMemo, useState } from "react";
 
 // ==========================
 // Improve Logic/Maths, Tinker with champion identities / specific roles. 
-// Research using riot database on improving counters
+// Research using riot database on improving counters logic
 // ==========================
 
 type Champ = { id: string; key: string; name: string; title: string; tags: string[]; image: { full: string } };
