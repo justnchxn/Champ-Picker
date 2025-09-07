@@ -286,7 +286,7 @@ export default function ChampionRecommender(){
       <div style={{ width:"100%", margin:0, padding:"24px clamp(16px,3vw,48px)" }}>
         <header style={{ marginBottom: 12 }}>
           <h1 style={{ fontSize:28, fontWeight:800, margin:0 }}>LoL Champion Recommender</h1>
-          <p style={{ ...smallText, marginTop: 4 }}>Supports multi-lane and multi-subclass champions. No duplicate-key errors.</p>
+          <p style={{ ...smallText, marginTop: 4 }}>Helps you find the right champ to pick depending on match up and team comp.</p>
         </header>
 
         {/* Controls */}
